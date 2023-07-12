@@ -6,20 +6,70 @@
 return {
   -- first key is the mode
   n = {
-    -- second key is the lefthand side of the map
-    -- mappings seen under group name "Buffer"
-    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    ["<leader>bD"] = {
-      function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
-      end,
-      desc = "Pick to close",
-    },
-    -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
-    ["<leader>b"] = { name = "Buffers" },
-    -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- diable defualt keymap
+    -- ["<leader>h"] = false,
+    -- ["<leader>o"] = false,
+    -- ["<leader>c"] = false,
+    -- ["<leader>C"] = false,
+    -- ["<leader>n"] = false,
+    -- ["<leader>g"] = false,
+    -- ["<leader>l"] = false,
+    -- ["<leader>ls"] = false,
+    -- ["<leader>lS"] = false,
+    -- ["<leader>g"] = false,
+    -- ["<leader>gl"] = false,
+    -- ["<leader>gL"] = false,
+    -- ["<leader>gp"] = false,
+    -- ["<leader>gh"] = false,
+    -- ["<leader>gr"] = false,
+    -- ["<leader>gs"] = false,
+    -- ["<leader>gS"] = false,
+    -- ["<leader>gu"] = false,
+    -- ["<leader>gd"] = false,
+    -- ["<leader>gb"] = false,
+    -- ["<leader>gc"] = false,
+    -- ["<leader>gg"] = false,
+    -- ["<leader>gt"] = false,
+    -- ["<leader>p"] = false,
+    -- ["<leader>pA"] = false,
+    -- ["<leader>pa"] = false,
+    -- ["<leader>pi"] = false,
+    -- ["<leader>pl"] = false,
+    -- ["<leader>pM"] = false,
+    -- ["<leader>pm"] = false,
+    -- ["<leader>ps"] = false,
+    -- ["<leader>pS"] = false,
+    -- ["<leader>pU"] = false,
+    -- ["<leader>pu"] = false,
+    -- ["<leader>pv"] = false,
+    -- ["<leader>u"] = false,
+    -- ["<leader>ua"] = false,
+    -- ["<leader>ub"] = false,
+    -- ["<leader>uc"] = false,
+    -- ["<leader>uC"] = false,
+    -- ["<leader>ud"] = false,
+    -- ["<leader>ug"] = false,
+    -- ["<leader>uh"] = false,
+    -- ["<leader>ui"] = false,
+    -- ["<leader>ul"] = false,
+    -- ["<leader>uL"] = false,
+    -- ["<leader>un"] = false,
+    -- ["<leader>uN"] = false,
+    -- ["<leader>up"] = false,
+    -- ["<leader>us"] = false,
+    -- ["<leader>uS"] = false,
+    -- ["<leader>ut"] = false,
+    -- ["<leader>uu"] = false,
+    -- ["<leader>uw"] = false,
+    -- ["<leader>uy"] = false,
+    -- jump split window
+    ["<leader>jh"] = { "<C-w>h", desc = "jump left screen" },
+    ["<leader>jj"] = { "<C-w>j", desc = "jump down screen" },
+    ["<leader>jk"] = { "<C-w>k", desc = "jump up screen" },
+    ["<leader>jl"] = { "<C-w>l", desc = "jump right screen" },
+    ["<leader>jb"] = { "<C-o>", desc = "jump back" },
+    ["<leader>ja"] = { "<C-i>", desc = "jump ahead" },
+    ["<leader>jc"] = { "<C-w>c", desc = "close" },
   },
   t = {
     -- setting a mapping to false will disable it
