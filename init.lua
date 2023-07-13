@@ -22,25 +22,24 @@ return {
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
-      virtual_text = {
-    severity = { min = vim.diagnostic.severity.ERROR }
-  },
-  signs = true,
-  update_in_insert = false,
-  underline = true,
-  show_header = false,
-  severity_sort = true,
-  float = {
-    source = "always",
-    border = "rounded",
-    style = "minimal",
-    header = "",
-    -- prefix = " ",
-    -- max_width = 100,
-    -- width = 60,
-    -- height = 20,
-  },
-
+    virtual_text = {
+      severity = { min = vim.diagnostic.severity.ERROR }
+    },
+    signs = true,
+    update_in_insert = false,
+    underline = true,
+    show_header = false,
+    severity_sort = true,
+    float = {
+      source = "always",
+      border = "rounded",
+      style = "minimal",
+      header = "",
+      -- prefix = " ",
+      -- max_width = 100,
+      -- width = 60,
+      -- height = 20,
+    },
   },
 
   lsp = {
