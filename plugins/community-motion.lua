@@ -5,6 +5,24 @@ return {
   { import = "astrocommunity.motion.flash-nvim" },
   {
     "folke/flash.nvim",
-    keys = function() return {} end,
+    keys = {
+      {
+        "s",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").jump()
+        end,
+        desc = "Flash",
+      },
+      {
+        "z",
+        mode = { "n", "o", "x" },
+        function()
+          require("flash").treesitter()
+        end,
+        desc = "Flash Treesitter",
+
+      }
+    }
   },
 }
