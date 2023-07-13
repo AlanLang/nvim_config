@@ -22,9 +22,25 @@ return {
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
-    virtual_text = false,
-    underline = true,
-    update_in_insert = false,
+      virtual_text = {
+    severity = { min = vim.diagnostic.severity.ERROR }
+  },
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  show_header = false,
+  severity_sort = true,
+  float = {
+    source = "always",
+    border = "rounded",
+    style = "minimal",
+    header = "",
+    -- prefix = " ",
+    -- max_width = 100,
+    -- width = 60,
+    -- height = 20,
+  },
+
   },
 
   lsp = {
@@ -52,6 +68,14 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+    },
+    capabilities = {
+      textDocument = {
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true
+        },
+        },
     },
   },
 
